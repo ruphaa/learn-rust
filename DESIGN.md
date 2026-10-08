@@ -1,74 +1,84 @@
 ---
 name: "Rust Field Notes"
-description: "A friendly, cream-and-pastel learning workspace for Rust lessons and guided projects."
+description: "Sky blue, coral, and indigo Rust learning with friendly serif headings."
 colors:
-  ink: "#334742"
-  ink-strong: "#213e37"
-  muted: "#536760"
-  faint: "#60706a"
-  ground: "#faf8f2"
-  ground-deep: "#f1f4ec"
+  ink: "#42445f"
+  ink-strong: "#44446e"
+  muted: "#555a75"
+  faint: "#60657e"
+  ground: "#ffffff"
+  ground-deep: "#f2f8fc"
   leaf: "#ffffff"
-  leaf-raised: "#e5eee6"
-  line: "#dce3d8"
-  line-strong: "#acbeb2"
-  rust: "#aa4935"
-  sage: "#276c59"
-  mint: "#e4f0e8"
-  peach: "#fbe6db"
-  lavender: "#eee8f5"
-  yellow: "#f7efcf"
-  dark-ink: "#e1e9e2"
-  dark-ink-strong: "#f0f5ec"
-  dark-muted: "#b9cabe"
-  dark-faint: "#acbdb1"
-  dark-ground: "#1b2925"
-  dark-ground-deep: "#20322b"
-  dark-leaf: "#253831"
-  dark-leaf-raised: "#304b3f"
-  dark-line: "#40564a"
-  dark-line-strong: "#6d8777"
-  dark-rust: "#ffac90"
-  dark-sage: "#a0d6bb"
-  dark-mint: "#304b3f"
-  dark-peach: "#503a31"
-  dark-lavender: "#42394e"
-  dark-yellow: "#49472f"
-  action: "#2c6b57"
-  action-hover: "#235543"
-  action-text: "#fff"
-  code-ground: "#223b36"
-  code-text: "#e5f0e7"
-  code-line: "#456258"
-  code-hover: "#36544a"
-  code-muted: "#c0d4c7"
-  result-action: "#d9eee1"
-  result-action-text: "#234a3c"
+  leaf-raised: "#e9effa"
+  line: "#dce1ed"
+  line-strong: "#9babc8"
+  rust: "#a63e51"
+  rust-dark: "#8c3043"
+  sage: "#454b7c"
+  sage-deep: "#34395f"
+  mint: "#d9f0f7"
+  peach: "#fce3e5"
+  lavender: "#e3eafa"
+  yellow: "#f0f1f7"
+  bad: "#a63e51"
+  sky: "#b5e2ee"
+  coral: "#f18489"
+  periwinkle: "#8da6d4"
+  action: "#f18489"
+  action-hover: "#ee979c"
+  action-text: "#343454"
+  dark-ink: "#e5e8f4"
+  dark-ink-strong: "#f2f3fd"
+  dark-muted: "#c0c7df"
+  dark-faint: "#aeb8d2"
+  dark-ground: "#202136"
+  dark-ground-deep: "#25273e"
+  dark-leaf: "#2c2e48"
+  dark-leaf-raised: "#383d5d"
+  dark-line: "#484e6c"
+  dark-line-strong: "#7c88ae"
+  dark-rust: "#ffaab1"
+  dark-rust-dark: "#ffc2c7"
+  dark-sage: "#b5ddec"
+  dark-sage-deep: "#d4eef8"
+  dark-mint: "#2d4659"
+  dark-peach: "#513647"
+  dark-lavender: "#393e62"
+  dark-yellow: "#37394e"
+  dark-bad: "#ffaab1"
+  dark-sky: "#35576b"
+  code-ground: "#30314e"
+  code-text: "#f1f3ff"
+  code-line: "#636a91"
+  code-hover: "#444b70"
+  code-muted: "#c5cde6"
+  result-action: "#b5e2ee"
+  result-action-text: "#343454"
 typography:
   display:
-    fontFamily: "Nunito Sans Variable, sans-serif"
+    fontFamily: "Bree Serif, Georgia, serif"
     fontSize: "clamp(2.7rem,4vw,4.4rem)"
-    fontWeight: 850
+    fontWeight: 400
     lineHeight: 1.1
-    letterSpacing: "-.025em"
+    letterSpacing: "-.01em"
   lesson-title:
-    fontFamily: "Nunito Sans Variable, sans-serif"
+    fontFamily: "Bree Serif, Georgia, serif"
     fontSize: "clamp(2.3rem,4vw,3.65rem)"
-    fontWeight: 850
-    lineHeight: 1.2
-    letterSpacing: "-.025em"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "-.01em"
   headline:
-    fontFamily: "Nunito Sans Variable, sans-serif"
+    fontFamily: "Bree Serif, Georgia, serif"
     fontSize: "1.6rem"
-    fontWeight: 800
-    lineHeight: 1.2
-    letterSpacing: "-.025em"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "0"
   title:
-    fontFamily: "Nunito Sans Variable, sans-serif"
+    fontFamily: "Bree Serif, Georgia, serif"
     fontSize: "1.25rem"
-    fontWeight: 800
-    lineHeight: 1.2
-    letterSpacing: "-.025em"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "0"
   body:
     fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "1rem"
@@ -173,130 +183,56 @@ components:
 
 ## Overview
 
-**Creative North Star: "Friendly Field Notes"**
+**Creative North Star: "Sky-blue Field Notes"**
 
-Rust Field Notes is a welcoming learning workspace: warm cream surrounds white reading surfaces, pastel notes, and rounded controls. Strong green text and generously spaced explanations keep the interface readable while the learner moves between concepts and practical builds.
-
-This document records the implemented replacement palette and typography authorized by the user's latest direction. The descriptive north star names that implementation; it is not an approved visual comp or an exact match to the unavailable reference image. Values are extracted from `src/friendly.css`, loaded by `src/main.jsx`. Light is the default appearance, with an optional dark theme carrying the same hierarchy and component shapes.
+The supplied medicine-presentation reference sets the theme: white ground, pale sky blue, coral, periwinkle, and deep indigo lettering. Bree Serif gives headings the same rounded slab-serif character; DM Sans keeps navigation and reading copy clear. This is a visual match in spirit, not a claim that the reference font was identified exactly. Layout, Rust content, and behavior remain unchanged.
 
 **Key Characteristics:**
 
-- Warm cream, white surfaces, sage actions, and mint, peach, lavender, and yellow accents.
-- Rounded containers, fine borders, and quiet tonal grouping.
-- Nunito Sans headings, DM Sans reading text, and IBM Plex Mono code.
-- Persistent desktop navigation with direct access to lessons and projects.
-- Visible code, explanations, progress, and next steps.
+- White canvas with sky-blue learning surfaces and coral primary actions.
+- Indigo serif headings, clear sans-serif body copy, and monospace code.
+- Existing rounded controls, responsive navigation, lessons, and project guides.
 
 ## Colors
 
-Sage establishes the action language; pastel surfaces distinguish learning levels and supporting notes. The frontmatter owns the default palette and its `dark-` counterparts. CSS swaps the semantic properties when dark mode is selected.
+Indigo is the reading, link, focus, and selection color. Sky blue owns the project starting prompt; lighter blue groups ownership traces and acceptance checks. Coral identifies primary build/completion actions. Periwinkle tints advanced badges and supporting surfaces. Code panes use fixed dark indigo in both themes. Dark mode uses navy surfaces and pale blue links, retaining coral actions with dark text.
 
-### Primary
-
-- **Sage** (`sage`): links, selected navigation, progress, focus, and completion text.
-- **Action green** (`action`, `action-hover`): primary links and completion buttons, with white action text. These fills stay fixed in both themes.
-
-### Secondary
-
-- **Mint** (`mint`): beginner badges, start prompts, ownership demonstrations, acceptance checks, and selected navigation.
-- **Peach** (`peach`): production badges, lesson-to-project prompts, and incorrect-answer feedback.
-
-### Tertiary
-
-- **Lavender** (`lavender`): advanced badges.
-- **Soft yellow** (`yellow`): intermediate badges, compiler notes, selected trace lines, and stretch goals.
-- **Rust** (`rust`): the brand mark and incorrect-answer borders.
-
-### Neutral
-
-- **Cream ground** (`ground`) and **quiet navigation ground** (`ground-deep`): the page and fixed course rail.
-- **White leaf** (`leaf`) and **tinted leaf** (`leaf-raised`): cards, fields, controls, and inline code.
-- **Green ink** (`ink`, `ink-strong`, `muted`, `faint`): reading text, headings, supporting prose, and metadata.
-- **Soft rules** (`line`, `line-strong`): borders, dividers, and control edges.
-- **Code colors** (`code-ground` through `result-action-text`): stable dark code surfaces and readable controls, independent of the page theme.
-
-**The Readable Pastel Rule.** Use pastel colors as surfaces behind strong text, and keep the level name or feedback message visible alongside the color.
+Legacy CSS names remain stable for compatibility: sage means the indigo/link role, mint means pale blue information surfaces, peach means coral-tinted feedback, and yellow means the cool neutral note surface. They no longer prescribe green, mint, peach, or yellow hues.
 
 ## Typography
 
-Headings use self-hosted Nunito Sans Variable, body and interface copy use self-hosted DM Sans Variable, and code uses self-hosted IBM Plex Mono at weights 400 and 500. Sans-serif and monospace fallbacks are defined in the frontmatter. Rounded, heavy headings give the page warmth; reading copy stays open and practical.
+Bree Serif is self-hosted in Latin at its sole 400 weight, with Georgia and serif fallbacks. Headings disable font synthesis; do not simulate a heavier weight. Main titles use -.01em tracking; smaller headings use normal tracking. DM Sans Variable supplies body text, navigation, metadata, and branding. IBM Plex Mono supplies code.
 
-The `display` role belongs to learning and project-library introductions; lesson and guide titles use `lesson-title`. Section headings use `headline`; ordinary subheadings use `title`. Project-card titles override that size to 1.4rem. The label role describes badges; other interface metadata stays in the body family.
-
-Continuous lesson prose is constrained to 68ch, lesson leads to 65ch, and library/guide introduction copy to 63ch. Root text scales from 0.9× to 1.2× through desktop text controls. At the narrow layout, display introductions use 2.8rem and code uses .8rem.
-
-**The Three Roles Rule.** Use Nunito Sans for headings, DM Sans for reading and interface copy, and IBM Plex Mono for code and compact source indices.
+The existing size hierarchy remains: lesson titles scale from 2.3rem to 3.65rem; library titles from 2.7rem to 4.4rem with 1.1 line height. Section headings are 1.6rem; project titles are 1.4rem. Body text is 1rem/1.7. Reading prose stays near 63–68ch. At mobile widths library titles use 2.8rem. Text-size preferences remain supported.
 
 ## Layout
 
-The desktop shell uses a fixed course rail (270px) below a fixed top bar (72px). The course list scrolls independently; progress, section shortcuts, and the source footer stay in the rail. Main content offsets match those dimensions.
-
-Lessons cap at 1230px with 48px horizontal padding, a flexible article, a 190px notes margin, and a 40px gap. Libraries and guides cap at 1220px with 52px horizontal padding. Project cards form two equal columns with a 20px gap. Guides pair a flexible article with a 215px aside and a 48px gap.
-
-- At 1200px and below, lesson notes and text-size controls hide, lesson content caps at 880px, and library gutters become 36px. Guide prerequisites and progress move above the article in two columns.
-- At 900px and below, the rail narrows to 245px, project cards form one column, and search becomes a 44px icon control.
-- At 760px and below, the top bar becomes 66px and the sidebar becomes a drawer capped at 330px and 90vw. Content loses its left offset and uses 22px page gutters. Answers and guide-aside content stack; project search spans the available width.
-- At 360px and below, the brand mark hides to preserve navigation space.
-
-**The Persistent Route Rule.** Keep Learn and Projects available in the top navigation, with the course and project rail visible on desktop and accessible through the mobile menu.
+Preserve the fixed 270px desktop sidebar and 72px top bar. Lessons cap at 1230px; libraries and guides at 1220px. Project cards use two columns and a 20px gap. Existing breakpoints remain 1200px, 900px, 760px, and 360px. At 760px the top bar is 66px, content has 22px gutters, and navigation becomes a visibility-hidden drawer when closed.
 
 ## Elevation & Depth
 
-Routine content uses borders, whitespace, and colored surfaces without shadows. The search dialog alone uses a shadow (`0 24px 70px #10261f38`) over its green scrim. The mobile rail sits above its own scrim.
-
-Motion is limited to card border/background transitions (160ms ease), the mobile drawer transform (180ms ease), and progress transforms (200ms ease). Reduced-motion preferences remove transitions and animations and restore automatic scrolling behavior.
+Flat colored surfaces and fine borders provide hierarchy. Only the search dialog has a shadow: 0 24px 70px #23244138. Search and drawer scrims use translucent indigo. Existing 160–200ms transitions respect reduced motion.
 
 ## Shapes
 
-Soft rectangular corners vary by use. The frontmatter records the observed radius scale for inline code, badges, fields, actions, controls, notes, cards, and panels. Borders are generally one pixel. Small circular metadata separators are an exception to the rectangular form.
+Preserve the established 4–16px corner scale and 1px rules. No medicine graphics or decorative notebook grid is added: the request concerns color and type.
 
 ## Components
 
-### Buttons
+Primary buttons use coral with dark indigo text; hover is a lighter coral. Links, focus rings, active filters, and selected trace steps use the theme’s indigo/blue accent. Inputs and cards stay white in light mode. Beginner badges use pale blue, Intermediate cool neutral, Advanced periwinkle, and Production coral tint. Correct/incorrect feedback retains visible labels and icons.
 
-Primary links use action green, white text, action-radius corners, 12px by 20px padding, and a 46px minimum height. Hover uses `action-hover`. Completion buttons use 12px by 16px padding and switch to a leaf background with sage text after completion. Icon controls are 44px squares with control-radius corners and a mint hover fill. Secondary links are unfilled, weight 600, with 12px by 4px padding.
-
-Interactive elements inherit a 3px sage focus outline with a 3px offset. Disabled buttons reduce opacity to .45. The explicit action-green hover change belongs to primary links; other controls have their own states.
-
-### Chips and Filters
-
-Static level badges pair names with mint for Beginner, yellow for Intermediate, lavender for Advanced, and peach for Production. Filters are separate buttons: transparent by default, mint on hover, and leaf-filled with a strong border and sage text when `aria-pressed` is true. Filters have a 42px minimum height.
-
-### Cards and Containers
-
-Project cards use the card radius and a fine border. Hover changes the border to sage and blends 30% mint into leaf. Cards show the level, time estimate, title, summary, concepts, and milestone count. Start prompts and ownership demonstrations use mint; compiler notes and stretch prompts use yellow; lesson-to-project prompts use peach.
-
-### Inputs and Search
-
-Project search uses a leaf surface, fine border, field radius, green caret, and faint placeholder. Its 185px desktop width becomes full width on mobile. Course search opens a dialog capped at 680px, with panel corners, a 42px input, a 44px close control, and results capped at 65vh. It searches lessons and projects, traps focus, and restores prior focus on close.
-
-### Navigation
-
-Lesson rows have a 43px minimum height, field-radius corners, and a compact mono index. Active rows use mint and sage; the active index uses sage with leaf-colored text. Completed indices use a check mark. Project links share the rounded navigation language. Learn and Projects remain direct links in the top bar and rail shortcuts.
-
-### Lesson Workbench and Ownership Trace
-
-Code uses the fixed dark palette in both themes, with horizontal overflow. Lesson tools say “Show result” because they reveal an expected result; local Cargo or the Rust Playground supplies real compilation. The ownership trace synchronizes a step, a yellow source-line highlight, explanatory copy, and a binding-to-heap diagram.
-
-Answer buttons have a strong border and a 62px minimum height. Correct answers use mint with a sage border; incorrect answers use peach with a rust border. Text and icons explain the result.
-
-### Project Guide
-
-Guides connect a goal and numbered application flow to setup instructions, standard-library starter code, and an ordered build plan. Copy, download, and collapse controls occupy the code toolbar. Each milestone has a labeled checkbox, task, and mint acceptance check. Completion updates a count, progress bar, and message; progress persists in the browser. The aside links prerequisite lessons. Starter code isolates an initial working piece; it is not presented as the completed final application.
+Code panels remain horizontally scrollable with pale monospace text and a sky-blue result action. Lesson results are predefined, not a browser compiler. Project copy, download, milestones, and saved progress are unchanged.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- Do use cream and pastel surfaces with strong, readable green text.
-- Do preserve the heading, reading, and code font roles.
-- Do keep lessons, projects, progress, and next steps easy to find.
-- Do pair color states with visible text, icons, or selected-control semantics.
-- Do preserve keyboard focus, readable code overflow, both themes, and reduced-motion behavior.
+- Do keep Bree Serif at its real 400 weight with font synthesis disabled.
+- Do use dark indigo text on pale accents and coral actions.
+- Do preserve the learning content, route behavior, and visible Projects navigation.
 
 ### Don't:
 
-- Don't restore the obsolete dark-first serif and square-container direction.
-- Don't hide project guides behind lesson pages or replace their build plans with lesson redirects.
-- Don't imply that revealing an expected result compiles Rust in the browser.
-- Don't claim an exact match to the unavailable reference image or an approved visual comp.
+- Don’t use white text on coral buttons; the dark action text is intentional.
+- Don’t restore the superseded cream-and-sage palette or Nunito headings.
+- Don’t infer medical illustrations or copy from a palette-and-type reference.

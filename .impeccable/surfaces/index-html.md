@@ -9,32 +9,20 @@ related_targets: ["src/App.jsx","src/Projects.jsx","src/friendly.css","src/main.
 
 ## Scope
 
-Primary target: `index.html` and the React application it loads. Current scope includes the learning overview, 23 lessons, the 15-project library, and real project guides spanning Beginner, Intermediate, Advanced, and Production. Visitor mode: Read, with Operate moments in examples, filters, checks, and milestone checklists.
+Read mode with interactive examples, quizzes, filters, and saved checklists. Preserve the learning overview, 23 lessons, 15 project guides, and all existing routes and behavior.
 
 ## Audience and job
 
-A first-time or returning learner needs a clear path from understanding one Rust concept to building a working application. The official Rust Book supplies the language foundation; additional practice guides distinguish their own instructions and link to official library documentation where needed. Progress and preferences stay in browser storage. The application remains statically hostable.
+Learn Rust from first principles using the official Rust Book, then apply concepts in increasingly substantial builds. The site remains static, with progress stored in the browser.
 
 ## Chosen direction
 
-Friendly Field Notes records the implemented response to the user's request for replacement friendly colors and new fonts. Cream grounds, white cards, sage actions, and mint, peach, lavender, and yellow supporting surfaces replace the previous dark-first square notebook styling. Nunito Sans headings, DM Sans reading text, and IBM Plex Mono code are the actual loaded fonts. Dark mode remains optional.
+The user's supplied medicine-presentation image is now the color and typography authority: white, pale sky blue, coral, periwinkle, and deep indigo. Bree Serif approximates its friendly slab-serif headings; DM Sans remains the reading/interface family and Plex Mono the code face. The exact reference font was not identified. The previous cream/sage/Nunito treatment is superseded.
 
-This descriptive name records the implementation rather than a newly approved visual comp. The Go learning reference informs visible navigation, accessible explanations, and the breadth of projects.
+## Implementation contract
 
-## Direction contract
+Keep the current layout, content, project discoverability, and mobile drawer. Change shared palette tokens, typography, code surfaces, and browser branding consistently. No medical illustrations or decorative graph-paper background are requested. White light mode is primary; the optional dark theme adapts these colors to navy backgrounds.
 
-THESIS: Make one concept understandable, then give the learner a practical build and visible next steps.
+## Evidence
 
-OWN-WORLD: Warm cream, pastel surfaces, rounded containers, strong green text, fine borders, and restrained motion. DESIGN.md records exact implemented tokens; src/friendly.css is the loaded stylesheet.
-
-STORY: The learner can explore the four-stage learning path or choose a project directly. Lessons connect plain-language explanations, predictable examples, checks, and suggested projects. Guides connect a goal, application flow, local setup, standard-library starter code, milestones, acceptance checks, prerequisites, and further sources. The starter is an initial working piece, not the complete final application.
-
-FIRST VIEWPORT: A fixed desktop course rail and top bar keep Learn and Projects visible. The project library introduces the range, offers a beginner starting point, and exposes level filters and search above grouped project cards. The learning overview offers a start/resume action and direct project access. Lesson views retain the ownership trace and instructional reading column.
-
-FORM: Persistent desktop navigation, a recoverable mobile drawer, rounded project cards, colored level labels, readable code panes, and saved checklist progress. Source, annotation, and ownership state stay synchronized in the first lesson's trace.
-
-FINISH: Capture the implemented system in DESIGN.md and .impeccable/design.json; review responsive navigation, keyboard focus, representative lessons, project browsing, guide interactions, and both themes.
-
-## Evidence and remaining limits
-
-The latest referenced image was unavailable to inspect, and the earlier local palette server was not running when sampling was attempted. The cream/pastel treatment was disclosed as an interpretation, not an exact reference match. No approved comp or new direction-roll approval is claimed.
+Desktop and mobile captures are in .impeccable/review. Browser tests cover all lesson/project sidebar destinations, filters, search, history, saved progress, both themes, the loaded heading font, text contrast, and 320px enlarged-text overflow. These checks support implementation quality, not an exact reproduction of the reference.

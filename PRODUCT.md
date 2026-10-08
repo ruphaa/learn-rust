@@ -37,14 +37,14 @@ Learners move through Beginner, Intermediate, Advanced, and Production tracks. T
 
 ## Brand Commitments
 
-The user's latest direction replaces the previous dark-first presentation with a friendly palette and new typography. The implemented default uses warm cream, sage green, peach, lavender, and soft yellow, with Nunito Sans headings and DM Sans reading text. An optional dark theme remains. Preserve the clarity, visible projects, and beginner-to-production breadth of the shared Go learning site.
+The user's supplied medicine-presentation image now defines the theme: white, pale sky blue, coral, periwinkle, and deep indigo lettering. Bree Serif headings approximate its rounded slab-serif character; DM Sans supplies reading and interface text. Exact reference-font identity is unconfirmed. The former cream/sage/Nunito interpretation is superseded. Preserve the existing learning layout, visible projects, and beginner-to-production breadth. An optional navy-based dark theme remains.
 
 ## Evidence on Hand
 
 - Official source: The Rust Programming Language at https://doc.rust-lang.org/book/
 - Interaction and curriculum reference: https://go-learn-app-seven.vercel.app/#/m/what-is-go
 - The user referenced a local palette at http://127.0.0.1:4173/#/lesson/why-rust, but that server was not running during implementation, so exact color sampling was unavailable.
-- The latest request referenced an image that was not available to inspect. The cream/pastel interpretation was disclosed as a starting point, not an exact image match.
+- The user subsequently supplied the actual reference: a white medicine-presentation design with pale blue and coral graphics, periwinkle accents, indigo serif headings, and sans-serif labels. Apply its color/type character, not its medical subject matter.
 
 ## Product Principles
 

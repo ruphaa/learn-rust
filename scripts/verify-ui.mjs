@@ -16,6 +16,24 @@ page.on('console', message => { if (message.type() === 'error') errors.push(mess
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
 const settle = () => page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
 async function heading(title) { await page.waitForFunction(expected => document.querySelector('h1')?.textContent === expected, {}, title); await settle(); }
+async function verifyTheme() {
+  await page.evaluate(() => document.fonts.ready);
+  assert.equal(await page.$eval('h1', el => getComputedStyle(el).fontFamily.includes('Bree Serif')), true);
+  assert.equal(await page.$eval('h1', el => getComputedStyle(el).fontWeight), '400');
+  assert.equal(await page.evaluate(() => [...document.fonts].some(font => font.family === 'Bree Serif' && font.status === 'loaded')), true);
+  const contrast = await page.evaluate(() => {
+    const css = getComputedStyle(document.documentElement);
+    const luminance = token => {
+      const hex = css.getPropertyValue(token).trim().slice(1);
+      const channels = [0, 2, 4].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(c => c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4);
+      return channels[0] * .2126 + channels[1] * .7152 + channels[2] * .0722;
+    };
+    const pairs = ['--ground', '--leaf', '--mint', '--peach', '--lavender', '--yellow', '--sky'].flatMap(bg => ['--ink', '--ink-strong', '--muted'].map(fg => [fg, bg]));
+    pairs.push(['--action-text', '--action'], ['--action-text', '--action-hover'], ['--faint', '--ground'], ['--sage', '--ground']);
+    return pairs.map(([fg, bg]) => { const a = luminance(fg), b = luminance(bg); return { fg, bg, ratio: (Math.max(a, b) + .05) / (Math.min(a, b) + .05) }; });
+  });
+  for (const pair of contrast) assert.ok(pair.ratio >= 4.5, `Text contrast: ${JSON.stringify(pair)}`);
+}
 async function capture(name) {
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.evaluate(() => document.fonts.ready);
@@ -29,6 +47,7 @@ try {
   await page.setViewport({ width: 1440, height: 1000 });
   await page.goto(`${url}#/lesson/why-rust`, { waitUntil: 'networkidle0' });
   assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), 'light');
+  await verifyTheme();
   for (const track of tracks) {
     const toggle = `.track-${track.id} button.track-heading`;
     if (await page.$eval(toggle, el => el.getAttribute('aria-expanded')) !== 'true') await page.locator(toggle).click();
@@ -101,7 +120,12 @@ try {
   await capture('guide-mobile');
   await page.locator('.top-actions .icon-button').click();
   assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), 'dark');
+  await verifyTheme();
   await capture('guide-mobile-dark');
+  await page.setViewport({ width: 320, height: 740 });
+  await page.evaluate(() => document.documentElement.style.setProperty('--font-scale', '1.2'));
+  await settle();
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '320px enlarged text overflows');
   assert.equal(await page.$$eval('.project-guide svg', nodes => nodes.length > 0), true);
   await page.goto(`${url}#/project/missing`, { waitUntil: 'networkidle0' });
   await heading('That page isn’t here.');
