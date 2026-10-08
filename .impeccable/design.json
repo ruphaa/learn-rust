@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T12:20:29.464Z",
+  "title": "Design System: Rust Field Notes",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0266 177.68)",
+          "oklch(26.43% 0.0266 177.68)",
+          "oklch(37.86% 0.0266 177.68)",
+          "oklch(49.29% 0.0266 177.68)",
+          "oklch(60.71% 0.0266 177.68)",
+          "oklch(72.14% 0.0266 177.68)",
+          "oklch(83.57% 0.0266 177.68)",
+          "oklch(95% 0.0266 177.68)"
+        ]
+      },
+      "ink-strong": {
+        "role": "neutral",
+        "displayName": "Ink Strong",
+        "tonalRamp": [
+          "oklch(15% 0.0374 176.68)",
+          "oklch(26.43% 0.0374 176.68)",
+          "oklch(37.86% 0.0374 176.68)",
+          "oklch(49.29% 0.0374 176.68)",
+          "oklch(60.71% 0.0374 176.68)",
+          "oklch(72.14% 0.0374 176.68)",
+          "oklch(83.57% 0.0374 176.68)",
+          "oklch(95% 0.0374 176.68)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0265 171.91)",
+          "oklch(26.43% 0.0265 171.91)",
+          "oklch(37.86% 0.0265 171.91)",
+          "oklch(49.29% 0.0265 171.91)",
+          "oklch(60.71% 0.0265 171.91)",
+          "oklch(72.14% 0.0265 171.91)",
+          "oklch(83.57% 0.0265 171.91)",
+          "oklch(95% 0.0265 171.91)"
+        ]
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Faint",
+        "tonalRamp": [
+          "oklch(15% 0.0213 170.87)",
+          "oklch(26.43% 0.0213 170.87)",
+          "oklch(37.86% 0.0213 170.87)",
+          "oklch(49.29% 0.0213 170.87)",
+          "oklch(60.71% 0.0213 170.87)",
+          "oklch(72.14% 0.0213 170.87)",
+          "oklch(83.57% 0.0213 170.87)",
+          "oklch(95% 0.0213 170.87)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0082 91.48)",
+          "oklch(26.43% 0.0082 91.48)",
+          "oklch(37.86% 0.0082 91.48)",
+          "oklch(49.29% 0.0082 91.48)",
+          "oklch(60.71% 0.0082 91.48)",
+          "oklch(72.14% 0.0082 91.48)",
+          "oklch(83.57% 0.0082 91.48)",
+          "oklch(95% 0.0082 91.48)"
+        ]
+      },
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Ground Deep",
+        "tonalRamp": [
+          "oklch(15% 0.0110 123.46)",
+          "oklch(26.43% 0.0110 123.46)",
+          "oklch(37.86% 0.0110 123.46)",
+          "oklch(49.29% 0.0110 123.46)",
+          "oklch(60.71% 0.0110 123.46)",
+          "oklch(72.14% 0.0110 123.46)",
+          "oklch(83.57% 0.0110 123.46)",
+          "oklch(95% 0.0110 123.46)"
+        ]
+      },
+      "leaf": {
+        "role": "neutral",
+        "displayName": "Leaf",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26.43% 0.0000 89.88)",
+          "oklch(37.86% 0.0000 89.88)",
+          "oklch(49.29% 0.0000 89.88)",
+          "oklch(60.71% 0.0000 89.88)",
+          "oklch(72.14% 0.0000 89.88)",
+          "oklch(83.57% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "leaf-raised": {
+        "role": "neutral",
+        "displayName": "Leaf Raised",
+        "tonalRamp": [
+          "oklch(15% 0.0143 148.77)",
+          "oklch(26.43% 0.0143 148.77)",
+          "oklch(37.86% 0.0143 148.77)",
+          "oklch(49.29% 0.0143 148.77)",
+          "oklch(60.71% 0.0143 148.77)",
+          "oklch(72.14% 0.0143 148.77)",
+          "oklch(83.57% 0.0143 148.77)",
+          "oklch(95% 0.0143 148.77)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0165 133.83)",
+          "oklch(26.43% 0.0165 133.83)",
+          "oklch(37.86% 0.0165 133.83)",
+          "oklch(49.29% 0.0165 133.83)",
+          "oklch(60.71% 0.0165 133.83)",
+          "oklch(72.14% 0.0165 133.83)",
+          "oklch(83.57% 0.0165 133.83)",
+          "oklch(95% 0.0165 133.83)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "tonalRamp": [
+          "oklch(15% 0.0259 156.58)",
+          "oklch(26.43% 0.0259 156.58)",
+          "oklch(37.86% 0.0259 156.58)",
+          "oklch(49.29% 0.0259 156.58)",
+          "oklch(60.71% 0.0259 156.58)",
+          "oklch(72.14% 0.0259 156.58)",
+          "oklch(83.57% 0.0259 156.58)",
+          "oklch(95% 0.0259 156.58)"
+        ]
+      },
+      "rust": {
+        "role": "tertiary",
+        "displayName": "Rust",
+        "tonalRamp": [
+          "oklch(15% 0.1323 33.27)",
+          "oklch(26.43% 0.1323 33.27)",
+          "oklch(37.86% 0.1323 33.27)",
+          "oklch(49.29% 0.1323 33.27)",
+          "oklch(60.71% 0.1323 33.27)",
+          "oklch(72.14% 0.1323 33.27)",
+          "oklch(83.57% 0.1323 33.27)",
+          "oklch(95% 0.1323 33.27)"
+        ]
+      },
+      "sage": {
+        "role": "primary",
+        "displayName": "Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0759 171.78)",
+          "oklch(26.43% 0.0759 171.78)",
+          "oklch(37.86% 0.0759 171.78)",
+          "oklch(49.29% 0.0759 171.78)",
+          "oklch(60.71% 0.0759 171.78)",
+          "oklch(72.14% 0.0759 171.78)",
+          "oklch(83.57% 0.0759 171.78)",
+          "oklch(95% 0.0759 171.78)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Mint",
+        "tonalRamp": [
+          "oklch(15% 0.0166 156.90)",
+          "oklch(26.43% 0.0166 156.90)",
+          "oklch(37.86% 0.0166 156.90)",
+          "oklch(49.29% 0.0166 156.90)",
+          "oklch(60.71% 0.0166 156.90)",
+          "oklch(72.14% 0.0166 156.90)",
+          "oklch(83.57% 0.0166 156.90)",
+          "oklch(95% 0.0166 156.90)"
+        ]
+      },
+      "peach": {
+        "role": "secondary",
+        "displayName": "Peach",
+        "tonalRamp": [
+          "oklch(15% 0.0274 49.59)",
+          "oklch(26.43% 0.0274 49.59)",
+          "oklch(37.86% 0.0274 49.59)",
+          "oklch(49.29% 0.0274 49.59)",
+          "oklch(60.71% 0.0274 49.59)",
+          "oklch(72.14% 0.0274 49.59)",
+          "oklch(83.57% 0.0274 49.59)",
+          "oklch(95% 0.0274 49.59)"
+        ]
+      },
+      "lavender": {
+        "role": "tertiary",
+        "displayName": "Lavender",
+        "tonalRamp": [
+          "oklch(15% 0.0185 306.66)",
+          "oklch(26.43% 0.0185 306.66)",
+          "oklch(37.86% 0.0185 306.66)",
+          "oklch(49.29% 0.0185 306.66)",
+          "oklch(60.71% 0.0185 306.66)",
+          "oklch(72.14% 0.0185 306.66)",
+          "oklch(83.57% 0.0185 306.66)",
+          "oklch(95% 0.0185 306.66)"
+        ]
+      },
+      "yellow": {
+        "role": "tertiary",
+        "displayName": "Yellow",
+        "tonalRamp": [
+          "oklch(15% 0.0427 95.50)",
+          "oklch(26.43% 0.0427 95.50)",
+          "oklch(37.86% 0.0427 95.50)",
+          "oklch(49.29% 0.0427 95.50)",
+          "oklch(60.71% 0.0427 95.50)",
+          "oklch(72.14% 0.0427 95.50)",
+          "oklch(83.57% 0.0427 95.50)",
+          "oklch(95% 0.0427 95.50)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0127 149.24)",
+          "oklch(26.43% 0.0127 149.24)",
+          "oklch(37.86% 0.0127 149.24)",
+          "oklch(49.29% 0.0127 149.24)",
+          "oklch(60.71% 0.0127 149.24)",
+          "oklch(72.14% 0.0127 149.24)",
+          "oklch(83.57% 0.0127 149.24)",
+          "oklch(95% 0.0127 149.24)"
+        ]
+      },
+      "dark-ink-strong": {
+        "role": "neutral",
+        "displayName": "Dark Ink Strong",
+        "tonalRamp": [
+          "oklch(15% 0.0130 130.78)",
+          "oklch(26.43% 0.0130 130.78)",
+          "oklch(37.86% 0.0130 130.78)",
+          "oklch(49.29% 0.0130 130.78)",
+          "oklch(60.71% 0.0130 130.78)",
+          "oklch(72.14% 0.0130 130.78)",
+          "oklch(83.57% 0.0130 130.78)",
+          "oklch(95% 0.0130 130.78)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0248 155.05)",
+          "oklch(26.43% 0.0248 155.05)",
+          "oklch(37.86% 0.0248 155.05)",
+          "oklch(49.29% 0.0248 155.05)",
+          "oklch(60.71% 0.0248 155.05)",
+          "oklch(72.14% 0.0248 155.05)",
+          "oklch(83.57% 0.0248 155.05)",
+          "oklch(95% 0.0248 155.05)"
+        ]
+      },
+      "dark-faint": {
+        "role": "neutral",
+        "displayName": "Dark Faint",
+        "tonalRamp": [
+          "oklch(15% 0.0251 155.01)",
+          "oklch(26.43% 0.0251 155.01)",
+          "oklch(37.86% 0.0251 155.01)",
+          "oklch(49.29% 0.0251 155.01)",
+          "oklch(60.71% 0.0251 155.01)",
+          "oklch(72.14% 0.0251 155.01)",
+          "oklch(83.57% 0.0251 155.01)",
+          "oklch(95% 0.0251 155.01)"
+        ]
+      },
+      "dark-ground": {
+        "role": "neutral",
+        "displayName": "Dark Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0205 175.09)",
+          "oklch(26.43% 0.0205 175.09)",
+          "oklch(37.86% 0.0205 175.09)",
+          "oklch(49.29% 0.0205 175.09)",
+          "oklch(60.71% 0.0205 175.09)",
+          "oklch(72.14% 0.0205 175.09)",
+          "oklch(83.57% 0.0205 175.09)",
+          "oklch(95% 0.0205 175.09)"
+        ]
+      },
+      "dark-ground-deep": {
+        "role": "neutral",
+        "displayName": "Dark Ground Deep",
+        "tonalRamp": [
+          "oklch(15% 0.0269 168.34)",
+          "oklch(26.43% 0.0269 168.34)",
+          "oklch(37.86% 0.0269 168.34)",
+          "oklch(49.29% 0.0269 168.34)",
+          "oklch(60.71% 0.0269 168.34)",
+          "oklch(72.14% 0.0269 168.34)",
+          "oklch(83.57% 0.0269 168.34)",
+          "oklch(95% 0.0269 168.34)"
+        ]
+      },
+      "dark-leaf": {
+        "role": "neutral",
+        "displayName": "Dark Leaf",
+        "tonalRamp": [
+          "oklch(15% 0.0276 169.67)",
+          "oklch(26.43% 0.0276 169.67)",
+          "oklch(37.86% 0.0276 169.67)",
+          "oklch(49.29% 0.0276 169.67)",
+          "oklch(60.71% 0.0276 169.67)",
+          "oklch(72.14% 0.0276 169.67)",
+          "oklch(83.57% 0.0276 169.67)",
+          "oklch(95% 0.0276 169.67)"
+        ]
+      },
+      "dark-leaf-raised": {
+        "role": "neutral",
+        "displayName": "Dark Leaf Raised",
+        "tonalRamp": [
+          "oklch(15% 0.0388 164.92)",
+          "oklch(26.43% 0.0388 164.92)",
+          "oklch(37.86% 0.0388 164.92)",
+          "oklch(49.29% 0.0388 164.92)",
+          "oklch(60.71% 0.0388 164.92)",
+          "oklch(72.14% 0.0388 164.92)",
+          "oklch(83.57% 0.0388 164.92)",
+          "oklch(95% 0.0388 164.92)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Line",
+        "tonalRamp": [
+          "oklch(15% 0.0335 160.74)",
+          "oklch(26.43% 0.0335 160.74)",
+          "oklch(37.86% 0.0335 160.74)",
+          "oklch(49.29% 0.0335 160.74)",
+          "oklch(60.71% 0.0335 160.74)",
+          "oklch(72.14% 0.0335 160.74)",
+          "oklch(83.57% 0.0335 160.74)",
+          "oklch(95% 0.0335 160.74)"
+        ]
+      },
+      "dark-line-strong": {
+        "role": "neutral",
+        "displayName": "Dark Line Strong",
+        "tonalRamp": [
+          "oklch(15% 0.0384 158.00)",
+          "oklch(26.43% 0.0384 158.00)",
+          "oklch(37.86% 0.0384 158.00)",
+          "oklch(49.29% 0.0384 158.00)",
+          "oklch(60.71% 0.0384 158.00)",
+          "oklch(72.14% 0.0384 158.00)",
+          "oklch(83.57% 0.0384 158.00)",
+          "oklch(95% 0.0384 158.00)"
+        ]
+      },
+      "dark-rust": {
+        "role": "tertiary",
+        "displayName": "Dark Rust",
+        "tonalRamp": [
+          "oklch(15% 0.1057 39.41)",
+          "oklch(26.43% 0.1057 39.41)",
+          "oklch(37.86% 0.1057 39.41)",
+          "oklch(49.29% 0.1057 39.41)",
+          "oklch(60.71% 0.1057 39.41)",
+          "oklch(72.14% 0.1057 39.41)",
+          "oklch(83.57% 0.1057 39.41)",
+          "oklch(95% 0.1057 39.41)"
+        ]
+      },
+      "dark-sage": {
+        "role": "primary",
+        "displayName": "Dark Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0675 162.79)",
+          "oklch(26.43% 0.0675 162.79)",
+          "oklch(37.86% 0.0675 162.79)",
+          "oklch(49.29% 0.0675 162.79)",
+          "oklch(60.71% 0.0675 162.79)",
+          "oklch(72.14% 0.0675 162.79)",
+          "oklch(83.57% 0.0675 162.79)",
+          "oklch(95% 0.0675 162.79)"
+        ]
+      },
+      "dark-mint": {
+        "role": "secondary",
+        "displayName": "Dark Mint",
+        "tonalRamp": [
+          "oklch(15% 0.0388 164.92)",
+          "oklch(26.43% 0.0388 164.92)",
+          "oklch(37.86% 0.0388 164.92)",
+          "oklch(49.29% 0.0388 164.92)",
+          "oklch(60.71% 0.0388 164.92)",
+          "oklch(72.14% 0.0388 164.92)",
+          "oklch(83.57% 0.0388 164.92)",
+          "oklch(95% 0.0388 164.92)"
+        ]
+      },
+      "dark-peach": {
+        "role": "secondary",
+        "displayName": "Dark Peach",
+        "tonalRamp": [
+          "oklch(15% 0.0349 43.25)",
+          "oklch(26.43% 0.0349 43.25)",
+          "oklch(37.86% 0.0349 43.25)",
+          "oklch(49.29% 0.0349 43.25)",
+          "oklch(60.71% 0.0349 43.25)",
+          "oklch(72.14% 0.0349 43.25)",
+          "oklch(83.57% 0.0349 43.25)",
+          "oklch(95% 0.0349 43.25)"
+        ]
+      },
+      "dark-lavender": {
+        "role": "tertiary",
+        "displayName": "Dark Lavender",
+        "tonalRamp": [
+          "oklch(15% 0.0374 304.14)",
+          "oklch(26.43% 0.0374 304.14)",
+          "oklch(37.86% 0.0374 304.14)",
+          "oklch(49.29% 0.0374 304.14)",
+          "oklch(60.71% 0.0374 304.14)",
+          "oklch(72.14% 0.0374 304.14)",
+          "oklch(83.57% 0.0374 304.14)",
+          "oklch(95% 0.0374 304.14)"
+        ]
+      },
+      "dark-yellow": {
+        "role": "tertiary",
+        "displayName": "Dark Yellow",
+        "tonalRamp": [
+          "oklch(15% 0.0379 103.96)",
+          "oklch(26.43% 0.0379 103.96)",
+          "oklch(37.86% 0.0379 103.96)",
+          "oklch(49.29% 0.0379 103.96)",
+          "oklch(60.71% 0.0379 103.96)",
+          "oklch(72.14% 0.0379 103.96)",
+          "oklch(83.57% 0.0379 103.96)",
+          "oklch(95% 0.0379 103.96)"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action",
+        "tonalRamp": [
+          "oklch(15% 0.0730 169.54)",
+          "oklch(26.43% 0.0730 169.54)",
+          "oklch(37.86% 0.0730 169.54)",
+          "oklch(49.29% 0.0730 169.54)",
+          "oklch(60.71% 0.0730 169.54)",
+          "oklch(72.14% 0.0730 169.54)",
+          "oklch(83.57% 0.0730 169.54)",
+          "oklch(95% 0.0730 169.54)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0625 167.03)",
+          "oklch(26.43% 0.0625 167.03)",
+          "oklch(37.86% 0.0625 167.03)",
+          "oklch(49.29% 0.0625 167.03)",
+          "oklch(60.71% 0.0625 167.03)",
+          "oklch(72.14% 0.0625 167.03)",
+          "oklch(83.57% 0.0625 167.03)",
+          "oklch(95% 0.0625 167.03)"
+        ]
+      },
+      "action-text": {
+        "role": "primary",
+        "displayName": "Action Text",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26.43% 0.0000 89.88)",
+          "oklch(37.86% 0.0000 89.88)",
+          "oklch(49.29% 0.0000 89.88)",
+          "oklch(60.71% 0.0000 89.88)",
+          "oklch(72.14% 0.0000 89.88)",
+          "oklch(83.57% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "code-ground": {
+        "role": "neutral",
+        "displayName": "Code Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0324 180.11)",
+          "oklch(26.43% 0.0324 180.11)",
+          "oklch(37.86% 0.0324 180.11)",
+          "oklch(49.29% 0.0324 180.11)",
+          "oklch(60.71% 0.0324 180.11)",
+          "oklch(72.14% 0.0324 180.11)",
+          "oklch(83.57% 0.0324 180.11)",
+          "oklch(95% 0.0324 180.11)"
+        ]
+      },
+      "code-text": {
+        "role": "neutral",
+        "displayName": "Code Text",
+        "tonalRamp": [
+          "oklch(15% 0.0167 151.10)",
+          "oklch(26.43% 0.0167 151.10)",
+          "oklch(37.86% 0.0167 151.10)",
+          "oklch(49.29% 0.0167 151.10)",
+          "oklch(60.71% 0.0167 151.10)",
+          "oklch(72.14% 0.0167 151.10)",
+          "oklch(83.57% 0.0167 151.10)",
+          "oklch(95% 0.0167 151.10)"
+        ]
+      },
+      "code-line": {
+        "role": "neutral",
+        "displayName": "Code Line",
+        "tonalRamp": [
+          "oklch(15% 0.0380 171.26)",
+          "oklch(26.43% 0.0380 171.26)",
+          "oklch(37.86% 0.0380 171.26)",
+          "oklch(49.29% 0.0380 171.26)",
+          "oklch(60.71% 0.0380 171.26)",
+          "oklch(72.14% 0.0380 171.26)",
+          "oklch(83.57% 0.0380 171.26)",
+          "oklch(95% 0.0380 171.26)"
+        ]
+      },
+      "code-hover": {
+        "role": "neutral",
+        "displayName": "Code Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0396 171.42)",
+          "oklch(26.43% 0.0396 171.42)",
+          "oklch(37.86% 0.0396 171.42)",
+          "oklch(49.29% 0.0396 171.42)",
+          "oklch(60.71% 0.0396 171.42)",
+          "oklch(72.14% 0.0396 171.42)",
+          "oklch(83.57% 0.0396 171.42)",
+          "oklch(95% 0.0396 171.42)"
+        ]
+      },
+      "code-muted": {
+        "role": "neutral",
+        "displayName": "Code Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0279 157.28)",
+          "oklch(26.43% 0.0279 157.28)",
+          "oklch(37.86% 0.0279 157.28)",
+          "oklch(49.29% 0.0279 157.28)",
+          "oklch(60.71% 0.0279 157.28)",
+          "oklch(72.14% 0.0279 157.28)",
+          "oklch(83.57% 0.0279 157.28)",
+          "oklch(95% 0.0279 157.28)"
+        ]
+      },
+      "result-action": {
+        "role": "primary",
+        "displayName": "Result Action",
+        "tonalRamp": [
+          "oklch(15% 0.0282 158.67)",
+          "oklch(26.43% 0.0282 158.67)",
+          "oklch(37.86% 0.0282 158.67)",
+          "oklch(49.29% 0.0282 158.67)",
+          "oklch(60.71% 0.0282 158.67)",
+          "oklch(72.14% 0.0282 158.67)",
+          "oklch(83.57% 0.0282 158.67)",
+          "oklch(95% 0.0282 158.67)"
+        ]
+      },
+      "result-action-text": {
+        "role": "primary",
+        "displayName": "Result Action Text",
+        "tonalRamp": [
+          "oklch(15% 0.0511 168.01)",
+          "oklch(26.43% 0.0511 168.01)",
+          "oklch(37.86% 0.0511 168.01)",
+          "oklch(49.29% 0.0511 168.01)",
+          "oklch(60.71% 0.0511 168.01)",
+          "oklch(72.14% 0.0511 168.01)",
+          "oklch(83.57% 0.0511 168.01)",
+          "oklch(95% 0.0511 168.01)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Introduction",
+        "purpose": "Learning and project-library opening headings."
+      },
+      "lesson-title": {
+        "displayName": "Lesson and guide title",
+        "purpose": "Page titles inside lesson and project guides."
+      },
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Reading and guide sections."
+      },
+      "title": {
+        "displayName": "Subheading",
+        "purpose": "Base subheading role; cards and milestones override size."
+      },
+      "body": {
+        "displayName": "Reading and interface",
+        "purpose": "Explanations and navigation."
+      },
+      "label": {
+        "displayName": "Level badge",
+        "purpose": "Named learning levels."
+      },
+      "code": {
+        "displayName": "Rust source",
+        "purpose": "Examples and starter code."
+      }
+    },
+    "shadows": [
+      {
+        "name": "search-dialog",
+        "value": "0 24px 70px #10261f38",
+        "purpose": "The modal search layer."
+      }
+    ],
+    "motion": [
+      {
+        "name": "project-card",
+        "value": "border-color 160ms ease,background 160ms ease",
+        "purpose": "Card hover."
+      },
+      {
+        "name": "mobile-drawer",
+        "value": "transform 180ms ease",
+        "purpose": "Mobile rail entrance."
+      },
+      {
+        "name": "progress",
+        "value": "transform 200ms ease",
+        "purpose": "Course progress."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "single-card-column",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-drawer",
+        "value": "760px"
+      },
+      {
+        "name": "small-phone",
+        "value": "360px"
+      }
+    ],
+    "focus": {
+      "value": "3px solid var(--sage)",
+      "offset": "3px"
+    },
+    "reducedMotion": "Remove transitions and animations; use automatic scrolling.",
+    "rampProvenance": "Synthesized OKLCH ramps for panel inspection only; the frontmatter and source CSS own implemented colors."
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The next learning or project action.",
+      "html": "<a class=\"ds-primary\" href=\"#/projects\">Explore projects</a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:12px 20px;min-height:46px;border-radius:9px;color:#fff;background:#2c6b57;text-decoration:none;font:600 .9rem/1.7 var(--sans,'DM Sans Variable',sans-serif)}.ds-primary:hover{background:#235543}.ds-primary:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}"
+    },
+    {
+      "name": "Lesson completion",
+      "kind": "button",
+      "refersTo": "button-complete",
+      "description": "Record a lesson; the completed state uses a leaf surface and sage text.",
+      "html": "<button class=\"ds-complete\" type=\"button\">Mark lesson complete</button>",
+      "css": ".ds-complete{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border:0;border-radius:9px;background:#2c6b57;color:#fff;font:600 .85rem/1.7 var(--sans,'DM Sans Variable',sans-serif);cursor:pointer}.ds-complete[aria-pressed=true]{background:var(--leaf,#ffffff);color:var(--sage,#276c59)}.ds-complete:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}"
+    },
+    {
+      "name": "Icon button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "Theme and mobile navigation controls.",
+      "html": "<button class=\"ds-icon\" type=\"button\" aria-label=\"Open course navigation\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 7h16M4 12h16M4 17h16\"/></svg></button>",
+      "css": ".ds-icon{width:44px;height:44px;display:grid;place-items:center;background:var(--leaf,#ffffff);color:var(--ink,#334742);border:1px solid var(--line,#dce3d8);border-radius:10px;cursor:pointer}.ds-icon:hover{background:var(--mint,#e4f0e8)}.ds-icon:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}"
+    },
+    {
+      "name": "Project search",
+      "kind": "input",
+      "refersTo": "project-search",
+      "description": "Filter projects by name and concept.",
+      "html": "<input class=\"ds-search\" type=\"search\" aria-label=\"Search projects\" placeholder=\"Find a project…\">",
+      "css": ".ds-search{border:1px solid var(--line,#dce3d8);border-radius:8px;padding:10px 12px;background:var(--leaf,#ffffff);color:var(--ink,#334742);width:185px;font:.85rem/1.7 var(--sans,'DM Sans Variable',sans-serif);caret-color:var(--sage,#276c59)}.ds-search::placeholder{color:var(--faint,#60706a);opacity:1}.ds-search:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}@media(max-width:760px){.ds-search{width:100%}}"
+    },
+    {
+      "name": "Lesson navigation",
+      "kind": "nav",
+      "refersTo": "navigation-item",
+      "description": "A selected curriculum row with a source index.",
+      "html": "<a class=\"ds-nav\" href=\"#/lesson/why-rust\" aria-current=\"page\"><i>1</i><span>Why Rust?</span></a>",
+      "css": ".ds-nav{display:grid;grid-template-columns:22px 1fr;align-items:center;gap:8px;min-height:43px;padding:9px 10px;border-radius:8px;text-decoration:none;color:var(--muted,#536760);font:.82rem/1.45 var(--sans,'DM Sans Variable',sans-serif)}.ds-nav i{display:grid;place-items:center;height:20px;width:20px;font:normal .7rem var(--mono,'IBM Plex Mono',monospace);color:var(--faint,#60706a)}.ds-nav[aria-current]{background:var(--mint,#e4f0e8);color:var(--sage,#276c59);font-weight:650}.ds-nav[aria-current] i{background:var(--sage,#276c59);color:var(--leaf,#ffffff);border-radius:5px}.ds-nav:hover{background:var(--leaf,#ffffff)}.ds-nav:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}"
+    },
+    {
+      "name": "Learning level",
+      "kind": "chip",
+      "refersTo": "level-badge",
+      "description": "Static level labels retain their names alongside pastel color.",
+      "html": "<span class=\"ds-badge\">Beginner</span>",
+      "css": ".ds-badge{display:inline-block;border-radius:6px;padding:4px 9px;font:650 .75rem/1.7 var(--sans,'DM Sans Variable',sans-serif);background:var(--mint,#e4f0e8);color:var(--ink-strong,#213e37)}.ds-badge[data-level=intermediate]{background:var(--yellow,#f7efcf)}.ds-badge[data-level=advanced]{background:var(--lavender,#eee8f5)}.ds-badge[data-level=production]{background:var(--peach,#fbe6db)}"
+    },
+    {
+      "name": "Project card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "An actionable guide summary with room for concepts and milestones.",
+      "html": "<a class=\"ds-card\" href=\"#/project/temperature\"><h3>Temperature converter</h3><p>Start with a tiny program that works.</p><span>Explore the guide →</span></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;border:1px solid var(--line,#dce3d8);background:var(--leaf,#ffffff);border-radius:14px;padding:24px;text-decoration:none;color:var(--ink,#334742);font:1rem/1.7 var(--sans,'DM Sans Variable',sans-serif);transition:border-color 160ms ease,background 160ms ease}.ds-card:hover{border-color:var(--sage,#276c59);background:color-mix(in srgb,var(--mint,#e4f0e8) 30%,var(--leaf,#ffffff))}.ds-card h3{margin:19px 0 10px;font:800 1.4rem/1.2 var(--heading,'Nunito Sans Variable',sans-serif);letter-spacing:-.025em;color:var(--ink-strong,#213e37)}.ds-card p{margin:0 0 20px;color:var(--muted,#536760);font-size:.91rem}.ds-card>span{border-top:1px solid var(--line,#dce3d8);padding-top:15px;margin-top:18px;color:var(--sage,#276c59);font-size:.77rem}.ds-card:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}@media(max-width:760px){.ds-card{padding:22px}.ds-card h3{font-size:1.3rem}}@media(prefers-reduced-motion:reduce){.ds-card{transition:none}}"
+    },
+    {
+      "name": "Answer choice",
+      "kind": "button",
+      "refersTo": "answer-option",
+      "description": "A prediction choice with semantic and visible result states.",
+      "html": "<button class=\"ds-answer\" type=\"button\"><span>B</span>moved</button>",
+      "css": ".ds-answer{min-height:62px;display:flex;align-items:center;gap:12px;border:1px solid var(--line-strong,#acbeb2);border-radius:10px;padding:12px 16px;text-align:left;background:var(--leaf,#ffffff);color:var(--ink,#334742);font:.9rem/1.7 var(--sans,'DM Sans Variable',sans-serif);cursor:pointer}.ds-answer>span{color:var(--faint,#60706a);font:.8rem var(--mono,'IBM Plex Mono',monospace)}.ds-answer:hover{background:var(--mint,#e4f0e8)}.ds-answer[data-result=correct]{background:var(--mint,#e4f0e8);border-color:var(--sage,#276c59)}.ds-answer[data-result=incorrect]{background:var(--peach,#fbe6db);border-color:var(--rust,#aa4935)}.ds-answer:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}"
+    },
+    {
+      "name": "Compiler note",
+      "kind": "card",
+      "refersTo": "field-note",
+      "description": "A quiet yellow explanation beside the lesson.",
+      "html": "<aside class=\"ds-note\"><span>Compiler note</span><p>Ownership tells Rust when a value can be cleaned up.</p></aside>",
+      "css": ".ds-note{background:var(--yellow,#f7efcf);color:var(--ink,#334742);padding:20px;border-radius:12px;margin:24px 0;font:1rem/1.7 var(--sans,'DM Sans Variable',sans-serif)}.ds-note>span{font-weight:650;font-size:.85rem}.ds-note p{margin:7px 0 0}"
+    },
+    {
+      "name": "Code workbench",
+      "kind": "custom",
+      "refersTo": "code-workbench",
+      "description": "A stable dark example surface; the action reveals an expected result.",
+      "html": "<section class=\"ds-code\"><header><span>Example</span><button type=\"button\">Show result</button></header><pre tabindex=\"0\"><code>let note = String::from(\"hello\");\nlet moved = note;</code></pre><footer>Predict what happens, then reveal the result.</footer></section>",
+      "css": ".ds-code{background:#223b36;color:#e5f0e7;border-radius:12px;overflow:hidden;font:.8rem/1.7 var(--sans,'DM Sans Variable',sans-serif)}.ds-code header{display:flex;align-items:center;justify-content:space-between;padding-left:16px;border-bottom:1px solid #456258}.ds-code button{min-height:46px;border:0;background:#d9eee1;color:#234a3c;padding:10px 12px;font:.8rem/1.7 var(--sans,'DM Sans Variable',sans-serif);cursor:pointer}.ds-code pre{padding:22px;margin:0;overflow-x:auto;font:.85rem/1.8 var(--mono,'IBM Plex Mono',monospace);tab-size:4}.ds-code code{font:inherit}.ds-code footer{padding:14px 18px;border-top:1px solid #456258;color:#c0d4c7}.ds-code button:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}.ds-code pre:focus-visible{outline:3px solid var(--sage,#276c59);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Friendly Field Notes",
+    "overview": "Rust Field Notes is a welcoming learning workspace: warm cream surrounds white reading surfaces, pastel notes, and rounded controls. Strong green text and generously spaced explanations keep the interface readable while the learner moves between concepts and practical builds.\n\nThis document records the implemented replacement palette and typography authorized by the user's latest direction. The descriptive north star names that implementation; it is not an approved visual comp or an exact match to the unavailable reference image. Values are extracted from `src/friendly.css`, loaded by `src/main.jsx`. Light is the default appearance, with an optional dark theme carrying the same hierarchy and component shapes.",
+    "keyCharacteristics": [
+      "Warm cream, white surfaces, sage actions, and mint, peach, lavender, and yellow accents.",
+      "Rounded containers, fine borders, and quiet tonal grouping.",
+      "Nunito Sans headings, DM Sans reading text, and IBM Plex Mono code.",
+      "Persistent desktop navigation with direct access to lessons and projects.",
+      "Visible code, explanations, progress, and next steps."
+    ],
+    "rules": [
+      {
+        "name": "The Readable Pastel Rule",
+        "body": "Use pastel colors as surfaces behind strong text, and keep the level name or feedback message visible alongside the color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Roles Rule",
+        "body": "Use Nunito Sans for headings, DM Sans for reading and interface copy, and IBM Plex Mono for code and compact source indices.",
+        "section": "typography"
+      },
+      {
+        "name": "The Persistent Route Rule",
+        "body": "Keep Learn and Projects available in the top navigation, with the course and project rail visible on desktop and accessible through the mobile menu.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do use cream and pastel surfaces with strong, readable green text.",
+      "Do preserve the heading, reading, and code font roles.",
+      "Do keep lessons, projects, progress, and next steps easy to find.",
+      "Do pair color states with visible text, icons, or selected-control semantics.",
+      "Do preserve keyboard focus, readable code overflow, both themes, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't restore the obsolete dark-first serif and square-container direction.",
+      "Don't hide project guides behind lesson pages or replace their build plans with lesson redirects.",
+      "Don't imply that revealing an expected result compiles Rust in the browser.",
+      "Don't claim an exact match to the unavailable reference image or an approved visual comp."
+    ]
+  }
+}

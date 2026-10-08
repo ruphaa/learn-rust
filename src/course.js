@@ -1,0 +1,187 @@
+export const tracks = [
+  {
+    id: "beginner",
+    label: "Beginner",
+    description: "Build the mental model",
+    lessons: [
+      ["why-rust", "Why Rust?", "4 min"],
+      ["cargo-first-program", "Cargo & your first program", "10 min"],
+      ["variables-types", "Variables, types & functions", "13 min"],
+      ["control-flow", "Decisions & repetition", "11 min"],
+      ["ownership", "Ownership: the big idea", "16 min"],
+      ["borrowing-slices", "Borrowing & slices", "18 min"],
+    ],
+  },
+  {
+    id: "intermediate",
+    label: "Intermediate",
+    description: "Model real programs",
+    lessons: [
+      ["structs-methods", "Structs & methods", "14 min"],
+      ["enums-patterns", "Enums & pattern matching", "16 min"],
+      ["modules", "Crates, modules & privacy", "15 min"],
+      ["collections", "Vectors, strings & maps", "17 min"],
+      ["errors", "Result, panic & the ? operator", "18 min"],
+      ["testing", "Tests that explain intent", "15 min"],
+    ],
+  },
+  {
+    id: "advanced",
+    label: "Advanced",
+    description: "Use Rust's full vocabulary",
+    lessons: [
+      ["traits-lifetimes", "Traits, generics & lifetimes", "22 min"],
+      ["closures-iterators", "Closures & iterators", "18 min"],
+      ["smart-pointers", "Smart pointers", "24 min"],
+      ["concurrency", "Fearless concurrency", "24 min"],
+      ["async", "Async, futures & tasks", "24 min"],
+      ["advanced-features", "Unsafe, macros & advanced traits", "26 min"],
+    ],
+  },
+  {
+    id: "production",
+    label: "Production",
+    description: "Ship maintainable Rust",
+    lessons: [
+      ["cli-architecture", "A production-shaped CLI", "23 min"],
+      ["workspaces-profiles", "Workspaces & release profiles", "17 min"],
+      ["web-server", "From socket to web server", "28 min"],
+      ["thread-pool", "Thread pools & graceful shutdown", "27 min"],
+      ["shipping", "Document, lint, test & ship", "20 min"],
+    ],
+  },
+];
+
+const details = {
+  "why-rust": {
+    chapter: "Introduction + Chapter 4",
+    href: "https://doc.rust-lang.org/book/ch00-00-introduction.html",
+    lead: "Rust lets you write fast, low-level programs without giving up strong safety guarantees.",
+    simple: "Its unusual promise is not ‘no bugs.’ It is this: many expensive bugs become code that refuses to compile.",
+    concept: "Ownership is Rust's way to know when a value can be cleaned up, without a garbage collector.",
+    code: `fn main() {\n    let note = String::from("hello");\n    let moved = note;\n    println!("{moved}");\n}`,
+    output: "hello",
+    question: "After `let moved = note`, which name owns the String?",
+    options: ["Both names", "moved", "note", "Neither name"],
+    answer: 1,
+    explain: "`String` is moved into `moved`. Rust prevents `note` from being used afterward, so only one owner is responsible for cleanup.",
+    build: "Trace a value",
+  },
+  "cargo-first-program": {
+    chapter: "Chapter 1",
+    href: "https://doc.rust-lang.org/book/ch01-00-getting-started.html",
+    lead: "Cargo creates, builds, runs, tests, and shares Rust projects.",
+    simple: "Start with one command. Cargo gives your project a predictable shape, then keeps the compiler commands out of your way.",
+    concept: "`cargo check` is your fastest feedback loop: it validates code without producing the final executable.",
+    code: `fn main() {\n    println!("Hello, Rust!");\n}`,
+    output: "Hello, Rust!",
+    question: "Which command checks a project without building the final binary?",
+    options: ["cargo new", "cargo check", "cargo run", "rustc --release"],
+    answer: 1,
+    explain: "`cargo check` performs compilation analysis but skips the final code-generation step, so it is usually much faster.",
+    build: "Create a temperature converter",
+  },
+  "variables-types": {
+    chapter: "Chapter 3.1–3.3",
+    href: "https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html",
+    lead: "Bindings are immutable by default, and every value has a type Rust can reason about.",
+    simple: "Defaults matter. Rust makes changing data an explicit decision because hidden change is harder to reason about.",
+    concept: "Use `mut` for a value that changes; shadowing creates a new binding and may change its type.",
+    code: `fn main() {\n    let spaces = "   ";\n    let spaces = spaces.len();\n    println!("{spaces}");\n}`,
+    output: "3",
+    question: "Why can the second `spaces` have a different type?",
+    options: ["It is mutable", "It is a new binding", "Rust converts it", "All variables are dynamic"],
+    answer: 1,
+    explain: "Shadowing with `let` creates a fresh binding. Reassignment would need `mut` and could not change the binding's type.",
+    build: "Convert temperatures",
+  },
+  "control-flow": {
+    chapter: "Chapter 3.5",
+    href: "https://doc.rust-lang.org/book/ch03-05-control-flow.html",
+    lead: "Rust uses expressions to make decisions and one `loop` family to repeat work.",
+    simple: "An `if` can produce a value. A `loop` can also produce a value when you `break` with one.",
+    concept: "Because branches are expressions, every possible branch must resolve to one compatible type.",
+    code: `fn main() {\n    let score = 82;\n    let result = if score >= 50 { "pass" } else { "retry" };\n    println!("{result}");\n}`,
+    output: "pass",
+    question: "Why must both `if` branches return compatible types?",
+    options: ["Only for speed", "The expression needs one type", "Because strings are special", "They do not"],
+    answer: 1,
+    explain: "The whole `if` expression has one type, so either path must produce a value that fits that type.",
+    build: "Generate the Fibonacci sequence",
+  },
+  ownership: {
+    chapter: "Chapter 4.1",
+    href: "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+    lead: "Ownership connects a value to exactly one binding at a time.",
+    simple: "When ownership moves, the old name stops being usable. That rule prevents two places from cleaning up the same heap allocation.",
+    concept: "Stack-only values such as integers usually implement `Copy`; owned heap values such as `String` move by default.",
+    code: `fn main() {\n    let first = String::from("rust");\n    let second = first;\n    println!("{second}");\n}`,
+    output: "rust",
+    question: "What would happen if the program printed `first` after the move?",
+    options: ["It prints rust", "It prints nothing", "The compiler rejects it", "It panics at runtime"],
+    answer: 2,
+    explain: "Rust catches the use-after-move during compilation. No executable with that mistake is produced.",
+    build: "Model a library checkout",
+  },
+  "borrowing-slices": {
+    chapter: "Chapter 4.2–4.3",
+    href: "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    lead: "A reference lets code use a value without taking ownership of it.",
+    simple: "Borrowing is temporary access. Many readers are allowed, or one writer—but not both at the same time.",
+    concept: "Slices are references to a contiguous part of a collection, so they carry access without copying the data.",
+    code: `fn first_word(text: &str) -> &str {\n    text.split_whitespace().next().unwrap_or("")\n}\n\nfn main() {\n    let line = String::from("safe systems");\n    println!("{}", first_word(&line));\n}`,
+    output: "safe",
+    question: "Why does `first_word` take `&str` instead of `String`?",
+    options: ["It is always faster", "It borrows string-like data", "It makes text mutable", "String is invalid here"],
+    answer: 1,
+    explain: "`&str` borrows text and works with both owned `String` values and string literals without taking ownership.",
+    build: "Write a word counter",
+  },
+};
+
+const generated = {
+  "structs-methods": ["Chapter 5", "Group related values and put behavior beside the type that owns it.", "A method is a function whose first parameter is `self`, `&self`, or `&mut self`.", `#[derive(Debug)]\nstruct Rectangle { width: u32, height: u32 }\n\nimpl Rectangle {\n    fn area(&self) -> u32 { self.width * self.height }\n}\n\nfn main() {\n    let r = Rectangle { width: 8, height: 5 };\n    println!("{}", r.area());\n}`, "40", "Why does `area` borrow `self`?", "It only needs to read the rectangle"],
+  "enums-patterns": ["Chapter 6", "Enums describe a value that can be exactly one of several meaningful shapes.", "`match` forces you to handle every possibility, turning forgotten cases into compiler feedback.", `enum Direction { North, South, East, West }\n\nfn label(direction: Direction) -> &'static str {\n    match direction {\n        Direction::North => "up",\n        Direction::South => "down",\n        Direction::East => "right",\n        Direction::West => "left",\n    }\n}`, "match is exhaustive", "What does exhaustive matching prevent?", "Forgetting a possible variant"],
+  modules: ["Chapter 7", "Packages, crates, modules, and paths decide where code lives and who may use it.", "Items are private by default. Expose the smallest useful surface with `pub`.", `mod kitchen {\n    pub fn cook() {\n        println!("ready");\n    }\n}\n\nfn main() {\n    crate::kitchen::cook();\n}`, "ready", "Why are items private by default?", "To keep implementation details contained"],
+  collections: ["Chapter 8", "Vectors, strings, and hash maps store collections whose size is known at runtime.", "Choose the collection by access pattern: ordered list, UTF-8 text, or key-to-value lookup.", `use std::collections::HashMap;\n\nfn main() {\n    let mut scores = HashMap::new();\n    scores.insert("Ferris", 10);\n    println!("{}", scores["Ferris"]);\n}`, "10", "What does a hash map optimize for?", "Lookup by key"],
+  errors: ["Chapter 9", "Rust separates unrecoverable bugs from recoverable failures.", "Use `Result<T, E>` when the caller can make a meaningful decision; `?` returns errors early.", `use std::fs;\nuse std::io;\n\nfn load(path: &str) -> Result<String, io::Error> {\n    let text = fs::read_to_string(path)?;\n    Ok(text)\n}`, "Result<String, io::Error>", "What does `?` do on an error?", "Returns the error from the current function"],
+  testing: ["Chapter 11", "A good test names one behavior and makes its expectation obvious.", "Unit tests can inspect private details; integration tests exercise your public API from the outside.", `fn double(n: i32) -> i32 { n * 2 }\n\n#[test]\nfn doubles_negative_numbers() {\n    assert_eq!(double(-3), -6);\n}`, "test result: ok", "Where do integration tests live?", "In the tests directory"],
+  "traits-lifetimes": ["Chapter 10", "Generics remove duplication, traits describe shared behavior, and lifetimes connect borrowed inputs to borrowed outputs.", "A lifetime annotation does not extend a value's life; it describes a relationship the compiler should verify.", `fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\n    if x.len() > y.len() { x } else { y }\n}`, "a reference tied to the shorter input lifetime", "What does `'a` change at runtime?", "Nothing; it describes relationships to the compiler"],
+  "closures-iterators": ["Chapter 13", "Closures capture context and iterators describe a chain of transformations.", "Iterator adapters are lazy; work happens when a consuming adapter such as `collect` runs.", `fn main() {\n    let doubled: Vec<_> = (1..=3)\n        .map(|n| n * 2)\n        .collect();\n    println!("{doubled:?}");\n}`, "[2, 4, 6]", "When does `map` perform its work here?", "When collect consumes the iterator"],
+  "smart-pointers": ["Chapter 15", "Smart pointers combine pointer-like access with extra ownership behavior.", "`Box<T>` owns heap data, `Rc<T>` shares ownership, and `RefCell<T>` moves borrowing checks to runtime.", `enum List {\n    Cons(i32, Box<List>),\n    Nil,\n}\n\nuse List::{Cons, Nil};\nlet list = Cons(1, Box::new(Cons(2, Box::new(Nil))));`, "a recursive list with a known size", "Why does this recursive enum need Box?", "To give the recursive value a known size"],
+  concurrency: ["Chapter 16", "Rust's ownership rules keep working when code runs on multiple threads.", "Move owned values into threads; use channels for messages or `Arc<Mutex<T>>` for carefully shared state.", `use std::thread;\n\nfn main() {\n    let values = vec![1, 2, 3];\n    let handle = thread::spawn(move || println!("{values:?}"));\n    handle.join().unwrap();\n}`, "[1, 2, 3]", "Why is `move` useful here?", "It transfers captured ownership into the thread"],
+  async: ["Chapter 17", "Async code lets one thread make progress on other work while a task is waiting.", "An async function returns a future. Nothing advances it until an executor polls it.", `async fn fetch_label() -> String {\n    String::from("ready")\n}\n\nasync fn show() {\n    let label = fetch_label().await;\n    println!("{label}");\n}`, "ready (when run by an executor)", "What does an async function return?", "A future"],
+  "advanced-features": ["Chapters 19–20", "Unsafe Rust, advanced traits, types, functions, and macros let you cross the edges of the ordinary type system deliberately.", "`unsafe` unlocks a small set of operations; it does not turn off the borrow checker everywhere.", `unsafe fn dangerous() {\n    // uphold this function's safety contract here\n}\n\nfn main() {\n    unsafe { dangerous(); }\n}`, "no output", "What is the purpose of an unsafe block?", "To mark where specific unchecked guarantees are upheld"],
+  "cli-architecture": ["Chapter 12", "Separate argument parsing, application logic, and error reporting so each part can be tested.", "Keep `main` small. Put orchestration in `run`, return errors, and print user-facing failures to stderr.", `fn main() {\n    if let Err(error) = minigrep::run() {\n        eprintln!("Problem: {error}");\n        std::process::exit(1);\n    }\n}`, "errors go to stderr with a failure exit code", "Why keep main small?", "So the behavior can be tested outside process exit"],
+  "workspaces-profiles": ["Chapter 14", "Workspaces let related packages share one target directory and one dependency lockfile.", "Release profiles make build tradeoffs explicit instead of hiding them in ad hoc commands.", `[workspace]\nmembers = ["app", "core"]\n\n[profile.release]\nlto = true`, "one workspace, shared build output", "What does a workspace share?", "A Cargo.lock and target directory"],
+  "web-server": ["Chapter 21.1", "A web server begins with a TCP listener, a request, and a response written back to the stream.", "Start with the protocol boundary. Read enough to understand the request, then write a valid status line, headers, and body.", `use std::net::TcpListener;\n\nfn main() {\n    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();\n    for stream in listener.incoming() {\n        println!("connection: {:?}", stream.is_ok());\n    }\n}`, "connection: true", "What does TcpListener accept?", "Incoming TCP streams"],
+  "thread-pool": ["Chapter 21.2–21.3", "A fixed worker pool bounds concurrency and graceful shutdown makes cleanup part of the design.", "Workers wait for jobs behind a channel. Dropping the sender closes the channel and lets workers exit cleanly.", `impl Drop for ThreadPool {\n    fn drop(&mut self) {\n        drop(self.sender.take());\n        for worker in &mut self.workers {\n            if let Some(thread) = worker.thread.take() {\n                thread.join().unwrap();\n            }\n        }\n    }\n}`, "all workers joined", "Why drop the sender before joining workers?", "So blocked workers learn there are no more jobs"],
+  shipping: ["Chapters 11 and 14", "Shipping is a repeatable sequence: format, check, test, document, then build the release artifact.", "The goal is not a heroic final command; it is a small chain of feedback that runs the same way every time.", `$ cargo fmt --check\n$ cargo check\n$ cargo test\n$ cargo doc --no-deps\n$ cargo build --release`, "a checked release build", "Which command runs the test suite?", "cargo test"],
+};
+
+Object.entries(generated).forEach(([id, value]) => {
+  const [chapter, lead, concept, code, output, question, correct] = value;
+  details[id] = {
+    chapter,
+    href: "https://doc.rust-lang.org/book/",
+    lead,
+    simple: concept,
+    concept,
+    code,
+    output,
+    question,
+    options: [correct, "It is only a style convention", "The compiler guesses at runtime", "None of these"],
+    answer: 0,
+    explain: correct + ".",
+    build: id === "web-server" || id === "thread-pool" ? "Continue the web server" : "Apply it in the current build",
+  };
+});
+
+export const lessonById = details;
+export const allLessons = tracks.flatMap((track) =>
+  track.lessons.map(([id, title, time]) => ({ id, title, time, track: track.id, trackLabel: track.label })),
+);
+
+export function lessonMeta(id) {
+  return allLessons.find((lesson) => lesson.id === id) || allLessons[0];
+}

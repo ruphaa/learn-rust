@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+.impeccable/questions/
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/direction-options.json
+.impeccable/surface-brief-body.md
